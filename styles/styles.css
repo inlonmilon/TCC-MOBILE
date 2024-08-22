@@ -1,0 +1,263 @@
+:root{
+    --background-color: #FFFFFF;
+    --section: #FF3333;
+    --details: #ba1a1a;
+    --footer: #494949;
+    --footer2: #373737;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.padding{
+    padding: 0 12rem;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+}
+
+.headerDesk{
+    display: flex;
+    gap: 5.5rem;
+    height: 4.5rem;
+    padding: 2rem 4rem;
+    background-color: var(--background-color) ;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--footer2);
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+}
+
+#logo{
+    margin-left: 12rem;
+}
+
+#perfil{
+    margin-right: 12rem;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.bttnHeader{
+    padding: 1.5rem 2.5rem;
+    background-color: transparent;
+    color:  var(--footer2);
+    font-weight: 700;
+    border: none;
+    font-size: 1rem;
+}
+
+.bttnHeader:hover{
+    background-color: var(--section);
+    animation-duration: 1seg;
+}
+
+#heroSection{
+    height: 55rem;
+    background-color: var(--background-color);
+    color: var(--background-color);
+    gap: 30rem;
+    padding: 10rem 0;
+}
+
+#bannerH{
+    display: flex;
+    flex-direction: row-reverse;
+    color: var(--background-color);
+    height: 45rem;
+    background: linear-gradient(to bottom left, #FF3333, #ba1a1a );
+    padding: 4rem;
+    border-radius: 1rem;
+}
+
+#heroSection h1{
+    width: 60%;
+    font-size: 2.5rem;
+    text-align: end;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+#textoHero{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+    width: 50%;
+    justify-content: end;
+    margin-bottom: 2rem;
+}
+
+.bttnHero{
+    padding: .8rem 2rem;
+    width: 14rem;
+    background-color: var(--details);
+    color: var(--background-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-color: var(--background-color);
+    border-width: 1px;
+}
+
+#bttnHero:hover{
+    background-color: var(--section);
+}
+
+#produtosProntos{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 9rem;
+}
+
+.titleProdutos{
+    text-align: center;
+    line-height: 3rem;
+    margin: 9rem 0 6rem 0;
+}
+
+.titleProdutos h2{
+    font-size: 2rem
+}
+
+.titleProdutos p{
+    font-size: 1.2rem;
+}
+
+.cardSection{
+    display: flex;
+    justify-content: center;
+}
+
+.cardProdutos{
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.cardImg{
+    background: linear-gradient(to bottom, #ff3333, #ba1a1a);
+    height: 12rem;
+}
+
+
+
+.cardText2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    background-color: var(--background-color);
+    color: var(--section);
+    font-size: 1rem;
+    font-weight: 600;
+    border-style: none;
+}
+
+#produtosEspeciais{
+    background-color: var(--section);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 9rem;
+    margin-bottom: 14rem;
+}
+
+#action{
+    background-color: var(--section);
+    height: 45rem;
+    color: var(--background-color);
+    padding: 6rem 12rem;
+    display: flex;
+    margin-bottom: 14rem;
+    background: linear-gradient(to bottom right, #FF3333, #ba1414);
+}
+
+#action h1{
+    width: 50%;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#actionP{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#action p{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+}
+
+#socialContato{
+    background-color: var(--footer);
+    color: var(--background-color);
+    display: flex;
+    gap: 4rem;
+    padding: 6rem 0 6rem 12rem;
+    text-decoration: none;
+    line-height: 2rem;
+}
+
+#socialContato a{
+    text-decoration: none;
+    color: var(--background-color);
+    display: flex;
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+#footerDireitos{
+    background-color: var(--footer2);
+    height: 4rem;
+    color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px){
+    .headerDesk{
+        display: none;
+    }
+
+    #heroSection{
+        height: 37rem;
+    }
+
+}
+
+
+

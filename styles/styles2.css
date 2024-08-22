@@ -1,0 +1,178 @@
+:root {
+    --background-color: #FFFFFF;
+    --section: #FF3333;
+    --details: #ba1a1a;
+    --footer: #494949;
+    --footer2: #373737;
+    --feedback: #E3E3E3;
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.headerDesk {
+    display: none;
+}
+
+#heroSection {
+    background: linear-gradient(to bottom, #FF3333, #ba1a1a);
+    height: 30rem;
+    padding: 2.5rem 1rem;
+    display: flex;
+}
+
+#heroSection h1 {
+    font-size: 1.4rem;
+    color: var(--background-color);
+    text-align: end;
+}
+
+#textoHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 17rem;
+}
+
+#textoHero p {
+    font-size: 1rem;
+    color: var(--background-color);
+    font-weight: lighter;
+}
+
+.bttnHero {
+    margin-top: 1rem;
+    width: 11rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    color: var(--background-color);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.11));
+    border: var(--background-color);
+    border-radius: .2rem;
+    font-weight: lighter;
+}
+
+#produtosProntos, #produtosEspeciais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#produtosProntos{
+    padding: 4rem 1rem;
+}
+
+.titleProdutos {
+    margin-bottom: 2.5rem;
+}
+
+.titleProdutos, .titleProdutosE p {
+    font-weight: lighter;
+    margin-top: .5rem;
+}
+
+.cardProdutos{
+    width: 17.2rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.cardImg{
+    background: linear-gradient(to bottom, #ff3333, #ba1a1a);
+    height: 15rem;
+}
+
+.cardText, .cardText2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    font-size: 1rem;
+    border-style: none;
+}
+
+.cardText{
+    background-color: var(--section);
+    color: var(--background-color);
+}
+
+.titleProdutosE{
+    padding: 0;
+}
+
+.cardText2{
+    background-color: var(--background-color);
+    color: var(--section);
+}
+
+#produtosEspeciais{
+    background-color: var(--section);
+    padding: 4rem 0;
+}
+
+.titleProdutosE{
+    margin-bottom: 2.5rem;
+}
+
+.feedback{
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleFeedback{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.titleFeedback p{
+    font-weight: lighter;
+    margin-top: .5rem;
+}
+
+.comments{
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.unitComments{
+    background-color: var(--feedback);
+    padding: 2rem 1rem;
+}
+
+.feedbackImg{
+    width: 30%;
+}
+
+.feedbackContent{
+    width: 70%;
+    text-align: end;
+}
