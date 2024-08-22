@@ -38,9 +38,13 @@ h2 {
     display: flex;
 }
 
-#heroSection h1 {
+#heroSection h1,
+#action h1 {
     font-size: 1.4rem;
     color: var(--background-color);
+}
+
+#heroSection h1 {
     text-align: end;
 }
 
@@ -69,14 +73,15 @@ h2 {
     font-weight: lighter;
 }
 
-#produtosProntos, #produtosEspeciais{
+#produtosProntos,
+#produtosEspeciais {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-#produtosProntos{
+#produtosProntos {
     padding: 4rem 1rem;
 }
 
@@ -84,12 +89,13 @@ h2 {
     margin-bottom: 2.5rem;
 }
 
-.titleProdutos, .titleProdutosE p {
+.titleProdutos,
+.titleProdutosE p {
     font-weight: lighter;
     margin-top: .5rem;
 }
 
-.cardProdutos{
+.cardProdutos {
     width: 17.2rem;
     justify-content: center;
     display: flex;
@@ -97,18 +103,19 @@ h2 {
     gap: 2.5rem;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     gap: .2rem;
 }
 
-.cardImg{
+.cardImg {
     background: linear-gradient(to bottom, #ff3333, #ba1a1a);
     height: 15rem;
 }
 
-.cardText, .cardText2{
+.cardText,
+.cardText2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,62 +124,294 @@ h2 {
     border-style: none;
 }
 
-.cardText{
+.cardText {
     background-color: var(--section);
     color: var(--background-color);
 }
 
-.titleProdutosE{
+.titleProdutosE {
     padding: 0;
 }
 
-.cardText2{
+.cardText2 {
     background-color: var(--background-color);
     color: var(--section);
 }
 
-#produtosEspeciais{
+#produtosEspeciais {
     background-color: var(--section);
     padding: 4rem 0;
 }
 
-.titleProdutosE{
+.titleProdutosE {
     margin-bottom: 2.5rem;
 }
 
-.feedback{
+.feedback {
     padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.titleFeedback{
+.titleFeedback {
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
-.titleFeedback p{
+.titleFeedback p {
     font-weight: lighter;
     margin-top: .5rem;
 }
 
-.comments{
-    height: 30rem;
+.comments {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
 
-.unitComments{
+.unitComments {
     background-color: var(--feedback);
-    padding: 2rem 1rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    display: flex;
+    height: 8rem;
+    gap: 2rem;
 }
 
-.feedbackImg{
-    width: 30%;
+.feedbackImg {
+    background-color: var(--details);
+    width: 5.5rem;
+    height: 4rem;
+    border-radius: 99rem;
+
 }
 
-.feedbackContent{
-    width: 70%;
+.feedbackContent {
     text-align: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedbackContent h3 {
+    font-size: 1rem;
+}
+
+.feedbackContent p {
+    font-size: .9rem;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+#action {
+    background: linear-gradient(to bottom, #FF3333, #ba1a1a);
+    padding: 4rem 1rem;
+    height: 35rem;
+    color: var(--background-color);
+}
+
+#actionP {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    height: 20rem;
+    text-align: end;
+}
+
+#actionP p {
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.branco {
+    height: 4rem;
+}
+
+#socialContato {
+    background-color: var(--footer);
+    padding: 4rem 2rem;
+    color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#socialContato h3 {
+    margin-bottom: 1rem;
+}
+
+#socialContato a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+}
+
+#footerDireitos {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--footer2);
+    color: var(--background-color);
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .headerDesk {
+        display: block;
+        display: flex;
+        gap: 5.5rem;
+        height: 4.5rem;
+        padding: 2rem 4rem;
+        background-color: var(--background-color);
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: var(--footer2);
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        top: 0;
+        right: 0;
+        left: 0;
+        position: fixed;
+    }
+
+    #logo{
+        margin-left: 12rem;
+    }
+    
+    #perfil{
+        margin-right: 12rem;
+    }
+    
+    nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+    }
+    
+    .bttnHeader{
+        padding: 1.5rem 2.5rem;
+        background-color: transparent;
+        color:  var(--footer2);
+        font-weight: 700;
+        border: none;
+        font-size: 1rem;
+    }
+    
+    .bttnHeader:hover{
+        background-color: var(--section);
+        animation-duration: 1seg;
+    }
+
+    #heroSection{
+        height: 55rem;
+        background: linear-gradient(to top, #FFFFFF, #FFFFFF);
+        color: var(--background-color);
+        gap: 30rem;
+        padding: 8rem 10rem;
+    }
+    
+    #bannerH{
+        display: flex;
+        flex-direction: row-reverse;
+        color: var(--background-color);
+        height: 45rem;
+        background: linear-gradient(to bottom left, #FF3333, #ba1a1a );
+        padding: 4rem;
+        border-radius: 1rem;
+    }
+    
+    #heroSection h1{
+        width: 60%;
+        font-size: 2.5rem;
+        text-align: end;
+        font-weight: 700;
+        margin-top: 2rem;
+    }
+    
+    #textoHero{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 50%;
+        justify-content: end;
+        margin-bottom: 2rem;
+        height: 35rem;
+    }
+
+    #textoHero p{
+        font-size: 1.5rem;
+    }
+
+    .bttnHero{
+        width: 15rem;
+    }
+    #produtosProntos{
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 9rem;
+        padding: 0;
+    }
+
+    .titleProdutos{
+        text-align: center;
+        line-height: 3rem;
+        margin: 9rem 0 6rem 0;
+    }
+    
+    .titleProdutos h2{
+        font-size: 2rem
+    }
+    
+    .titleProdutos p{
+        font-size: 1.2rem;
+    }
+    
+    .cardSection{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .cardProdutos{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: 20rem;
+    }
+    
+    .cardImg{
+        background: linear-gradient(to bottom, #ff3333, #ba1a1a);
+        height: 15rem;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .cardText{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        background-color: var(--section);
+        color: var(--background-color);
+        font-size: 1rem;
+        font-weight: lighter;
+        border-style: none;
+        border-radius: 0 0 8px 8px;
+    }
+
 }
