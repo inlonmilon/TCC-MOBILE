@@ -5,7 +5,7 @@
     --footer: #494949;
     --footer2: #373737;
     --feedback: #E3E3E3;
-
+    --bttnHeader: #a6a4a4;
 
 }
 
@@ -264,7 +264,7 @@ h2 {
         display: flex;
         gap: 5.5rem;
         height: 4.5rem;
-        padding: 2rem 4rem;
+        padding: 2rem 1rem;
         background-color: var(--background-color);
         font-weight: 500;
         font-size: 1.2rem;
@@ -277,6 +277,7 @@ h2 {
         right: 0;
         left: 0;
         position: fixed;
+        z-index: 999;
     }
 
     #logo{
@@ -302,10 +303,11 @@ h2 {
         border: none;
         font-size: 1rem;
     }
-    
+
     .bttnHeader:hover{
-        background-color: var(--section);
-        animation-duration: 1seg;
+        background-color: var(--bttnHeader);
+        color: black;
+        backdrop-filter: opacity(20%);
     }
 
     #heroSection{
@@ -350,6 +352,7 @@ h2 {
 
     .bttnHero{
         width: 15rem;
+        height: 3.5rem;
     }
     #produtosProntos{
         background-color: var(--background-color);
@@ -401,17 +404,104 @@ h2 {
         border-radius: 8px 8px 0 0;
     }
 
-    .cardText{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .cardText, .cardText2{
         height: 3rem;
-        background-color: var(--section);
-        color: var(--background-color);
         font-size: 1rem;
         font-weight: lighter;
         border-style: none;
         border-radius: 0 0 8px 8px;
     }
 
+    .cardText{
+        background-color: var(--section);
+        color: var(--background-color);
+    }
+
+    #produtosEspeciais{
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .titleProdutosE{
+        margin-bottom: 6rem;
+    }
+
+    .feedback{
+        display: flex;
+        justify-content: center;
+    }
+
+    .titleFeedback{
+        margin-bottom: 6rem;
+    }
+
+    .unitComments{
+        height: 20rem;
+        width: 60rem;
+        display: flex;
+        align-items: center;
+        padding: 0 4rem;
+        border-radius: 15px;
+    }
+
+    .feedbackImg{
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .feedbackContent h3{
+        font-size: 1.5rem;
+        
+    }
+
+    #action{
+        height: 45rem;
+        padding: 6rem 12rem;
+        margin-bottom: 14rem;
+    }
+    
+    #action h1{
+        width: 50%;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    #actionP{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    
+    #action p{
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
+    }
+
+    #socialContato{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        padding: 6rem 0 6rem 12rem;
+        text-decoration: none;
+        line-height: 2rem;
+    }
+    
+    #footerDireitos{
+        height: 6rem;
+    }
+
+    .card:hover, .bttnHero:hover{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.1);   
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.1);
+        transition: all 200ms ease-in;
+        transform: scale(1.1);
+    }
 }
