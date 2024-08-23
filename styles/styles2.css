@@ -18,6 +18,10 @@
     font-style: normal;
 }
 
+img{
+    max-width: 100%;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--background-color);
@@ -33,9 +37,7 @@ h2 {
 
 #heroSection {
     background: linear-gradient(to bottom, #FF3333, #ba1a1a);
-    height: 30rem;
     padding: 2.5rem 1rem;
-    display: flex;
 }
 
 #heroSection h1,
@@ -49,10 +51,7 @@ h2 {
 }
 
 #textoHero {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    height: 17rem;
+    align-self: flex-end;
 }
 
 #textoHero p {
@@ -205,7 +204,7 @@ h2 {
 #action {
     background: linear-gradient(to bottom, #FF3333, #ba1a1a);
     padding: 4rem 1rem;
-    height: 35rem;
+    height: 100svh;
     color: var(--background-color);
 }
 
@@ -256,15 +255,42 @@ h2 {
     background-color: var(--footer2);
     color: var(--background-color);
     font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.navMobile{
+    height: 3rem;
+    background-color: var(--footer);
+    padding: 1rem 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navMobile > ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navMobileLink{
+    list-style: none;
+}
+
+.navMobileLink img{
+    height: 1.5rem;
+}
+
+input{
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
-    .headerDesk {
-        display: block;
+    header {
+        padding: 0 12rem;
         display: flex;
         gap: 5.5rem;
         height: 4.5rem;
-        padding: 2rem 1rem;
         background-color: var(--background-color);
         font-weight: 500;
         font-size: 1.2rem;
@@ -272,20 +298,39 @@ h2 {
         align-items: center;
         justify-content: space-between;
         position: sticky;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         top: 0;
         right: 0;
         left: 0;
         position: fixed;
         z-index: 999;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     }
 
-    #logo{
-        margin-left: 12rem;
+    header nav ul{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .navMobile{
+        display: none;
+    }
+
+    #logo img{
+        width: 3.5rem;
+        width: 3rem;
     }
     
-    #perfil{
-        margin-right: 12rem;
+
+    .perfilBttn{
+        height: 3rem;
+        width: 3rem;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .perfilBttn img{
+        height: 2rem;
     }
     
     nav ul{
@@ -302,16 +347,29 @@ h2 {
         font-weight: 700;
         border: none;
         font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    a{
+        text-decoration: none !important;
+        color: unset !important;
     }
 
     .bttnHeader:hover{
-        background-color: var(--bttnHeader);
-        color: black;
-        backdrop-filter: opacity(20%);
+        color: var(--details);
+    }
+
+    .searchBar{
+        height: 1.3rem;
+
+    }
+
+    #linha{
+        height: 1rem;
     }
 
     #heroSection{
-        height: 55rem;
         background: linear-gradient(to top, #FFFFFF, #FFFFFF);
         color: var(--background-color);
         gap: 30rem;
@@ -322,14 +380,13 @@ h2 {
         display: flex;
         flex-direction: row-reverse;
         color: var(--background-color);
-        height: 45rem;
+        height: 50rem;
         background: linear-gradient(to bottom left, #FF3333, #ba1a1a );
         padding: 4rem;
         border-radius: 1rem;
     }
     
     #heroSection h1{
-        width: 60%;
         font-size: 2.5rem;
         text-align: end;
         font-weight: 700;
@@ -340,10 +397,8 @@ h2 {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        width: 50%;
-        justify-content: end;
         margin-bottom: 2rem;
-        height: 35rem;
+        align-self: flex-end;
     }
 
     #textoHero p{
@@ -353,21 +408,24 @@ h2 {
     .bttnHero{
         width: 15rem;
         height: 3.5rem;
+        -webkit-transition: all 200ms ease-in-out;
+        -ms-transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+         transition: all 200ms ease-in-out;
     }
     #produtosProntos{
         background-color: var(--background-color);
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
-        margin-bottom: 9rem;
-        padding: 0;
+        height: 50rem;
     }
 
     .titleProdutos{
         text-align: center;
         line-height: 3rem;
-        margin: 9rem 0 6rem 0;
-    }
+        }
     
     .titleProdutos h2{
         font-size: 2rem
@@ -396,6 +454,12 @@ h2 {
         flex-direction: column;
         gap: .5rem;
         width: 20rem;
+        background-color: unset !important;
+        border: none !important;
+        -webkit-transition: all 200ms ease-in-out;
+        -ms-transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+         transition: all 200ms ease-in-out;
     }
     
     .cardImg{
@@ -418,7 +482,7 @@ h2 {
     }
 
     #produtosEspeciais{
-        height: 45rem;
+        height: 50rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -430,30 +494,29 @@ h2 {
 
     .feedback{
         display: flex;
+        align-items: center;
         justify-content: center;
+        height: 55rem;
+        padding: 3rem 0;
+        gap: 2rem;
     }
 
-    .titleFeedback{
-        margin-bottom: 6rem;
+    .comments{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .unitComments{
-        height: 20rem;
-        width: 60rem;
+        height: 30rem;
+        width: 64%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 0 4rem;
-        border-radius: 15px;
     }
 
-    .feedbackImg{
-        height: 10rem;
-        width: 10rem;
-    }
-
-    .feedbackContent h3{
-        font-size: 1.5rem;
-        
+    .unitComments h3, .unnitComments p{
+        text-align: center;
     }
 
     #action{
@@ -490,18 +553,23 @@ h2 {
     
     #footerDireitos{
         height: 6rem;
+        margin-bottom: 0;
     }
 
     .card:hover, .bttnHero:hover{
         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         z-index: 2;
-        -webkit-transition: all 200ms ease-in;
+       
         -webkit-transform: scale(1.1);
-        -ms-transition: all 200ms ease-in;
+        
         -ms-transform: scale(1.1);   
-        -moz-transition: all 200ms ease-in;
+        
         -moz-transform: scale(1.1);
-        transition: all 200ms ease-in;
+       
         transform: scale(1.1);
+    }
+
+    input{
+        display: block;
     }
 }
